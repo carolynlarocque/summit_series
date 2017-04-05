@@ -43,18 +43,10 @@ $red: #a90000;
 
 
 
-
-.mainHeader
+.title-bar
 {
-	background-color: #fff;
+	background-color: rgba(255,255,255,.9);
 }
-
-.topBar
-{
-	height: 76px;
-	background-color: #fff;
-}
-
 
 #logoMobile
 {
@@ -65,7 +57,28 @@ $red: #a90000;
 #logos
 {
 	display: block;
-	margin: 0 auto;
+	margin-left: 20%;
+}
+
+#logoToggle
+{
+	height: 100px;
+	display: inline-block;
+	margin-left: 15%;
+}
+
+#portalBut
+{
+	background-color: #000;
+	color: #fff;
+	font-family: $mainFont;
+	text-align: center;
+	padding: 5px;
+	display: block;
+	width: 100px;
+	float: right;
+	margin-right: 20px;
+	border-radius: 0 0 15px 15px;
 }
 
 .menu-icon:after
@@ -208,6 +221,8 @@ $red: #a90000;
 		list-style-type: none;
 		text-align: center;
 		padding-bottom: 20px;
+		display: inline-block;
+		margin: 0 auto;
 
 		li
 		{
@@ -305,7 +320,9 @@ $red: #a90000;
 
 	.socials
 	{
-		margin-bottom: 10px;
+		display: block;
+		margin: 0 auto;
+		padding-bottom: 10px;
 	}
 }
 
