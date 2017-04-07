@@ -13,10 +13,10 @@
 
   <body>
     <h1 class="hide">Team Canada 1972</h1>
-
-    <header class="row mainHeader">
-      <nav class="small-12 columns show-for-small-only">
-        <div class="title-bar topBar" data-responsive-toggle="mobileNav">
+<!--Mobile Header and Nav-->
+    <header class="row mainHeader show-for-small-only" data-sticky-container>
+      <nav class="small-12 columns">
+        <div class="title-bar" data-responsive-toggle="mobileNav">
           <button class="menu-icon float-left" type="button" data-toggle></button>
           <img src="images/logo.svg" alt="logo" width="60px" height="61px" class="title-bar-title" id="logoMobile">
         </div>
@@ -24,10 +24,10 @@
         <div id="mobileNav">
           <ul class="mainNav">
             <li><a href="index.html">HOME</a></li>
-            <li><a href="#">THE TEAM</a></li>
+            <li><a href="theteam.html">THE TEAM</a></li>
             <li><a href="#">SUMMIT SERIES</a></li>
             <li><a href="legacy.html">LEGACY</a></li>
-            <li><a href="#">GALLERY</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
             <li><a href="media.html">MEDIA CENTRE</a></li>
             <li><a href="partners.html">PARTNERS</a></li>
             <li><a href="#">MERCHANDISE</a></li>
@@ -37,27 +37,18 @@
         </div>
       </nav>
     </header>
+<!--Mobile Header and Nav CLOSE-->
 
+<!--Medium/Large Header and Nav-->
     <div class="off-canvas-wrapper">
       <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
-
-        <header class="mainHeader hide-for-small-only" data-sticky-container>
-          <h1 class="hide">Header - Medium/Large Screens</h1>
-          <div class="title-bar topBar" data-sticky data-options="marginTop:0">
-            <div class="title-bar-left">
-              <button class="menu-icon" type="button" data-toggle="offCanvasNav"></button>
-              <img data-interchange="[images/logo_medium.svg, medium], [images/logo_large.svg, large]" alt="Alternate Logos">
-            </div>
-          </div>
-        </header>
-
         <nav class="off-canvas position-left mainNav" id="offCanvasNav" data-off-canvas>
           <ul class="vertical menu" data-menu>
             <li><a href="index.html">HOME</a></li>
-            <li><a href="#">THE TEAM</a></li>
+            <li><a href="theteam.html">THE TEAM</a></li>
             <li><a href="#">SUMMIT SERIES</a></li>
             <li><a href="legacy.html">LEGACY</a></li>
-            <li><a href="#">GALLERY</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
             <li><a href="media.html">MEDIA CENTRE</a></li>
             <li><a href="partners.html">PARTNERS</a></li>
             <li><a href="#">MERCHANDISE</a></li>
@@ -66,23 +57,58 @@
         </nav>
 
         <div class="off-canvas-content" data-off-canvas-content>
+          <header class="mainHeader hide-for-small-only expanded" data-sticky-container>
+            <h1 class="hide">Header - Medium/Large Screens</h1>
+            <div class="large-12 columns" data-sticky data-options="stickTo:top;stickyOn:small;marginTop:0" style="width:100%">
+              <div class="title-bar">
+                <a href="#" id="portalBut">PORTAL</a>
+                <button class="menu-icon" type="button" data-toggle="offCanvasNav"></button>
+                <img data-interchange="[images/logo_medium.svg, medium], [images/logo_large.svg, large]" alt="Alternate Logos" id="logoToggle">
+              </div>
+            </div>
+          </header>
+<!--Medium/Large Header and Nav CLOSE-->
 
-          <div id="pano">
+          <div id="contactPano">
             <section class="row">
               <div class="small-12 columns">
-                <p class="boxHelper">Get in touch with us!</p>
+                <h2>GET IN TOUCH WITH US!</h2>
               </div>
             </section>
           </div>
 
-          <section class="row">
+          <section class="row" id="contactCon">
+            <h2 class="hide">Contact Information</h2>
+            <p class="small-12 show-for-small-only columns" id="contactInfoMobile">To learn more about Team Canada 1972, upcoming events, or have any questions, please feel free to reach out by filling out our form. We will be sure to get back to you as soon as possible!</p>
             <div class="small-12 medium-6 columns">
-              <p class="boxHelper product">Contact Form</p>
+              <form id="contactForm" action="form.php" method="post">
+                    <fieldset>
+                        <legend class="hide">Contact Form</legend>
+
+                        <label for="contactName">Name: (required)</label>
+                        <input type="text" id="contactName" required name="fullName" size="30">
+                        
+                        <label for="contactEmail">Email: (required)</label>
+                        <input type="email" id="contactEmail" required size="30">
+                        
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" required size="30">
+                        
+                        <label for="message">Message:</label>
+                        <textarea name="message" id="message" required cols="50" rows="7"></textarea>
+                    
+                        <input type="submit" id="submitForm" value="Submit">
+                    </fieldset>
+                </form>
             </div>
 
-            <div class="small-12 medium-6 columns">
-              <p class="boxHelper subProduct">Main Info</p>
-              <p class="boxHelper subProduct">Partnership Opp.</p>
+            <div class="medium-6 large-6 columns">
+              <p class="hide-for-small-only" id="contactInfo">To learn more about Team Canada 1972, upcoming events, or have any questions, please feel free to reach out by filling out our form. We will be sure to get back to you as soon as possible!</p>
+
+              <section id="partOpp">
+                <h3>Partnership Opportunities:</h3>
+                <p>For any information regarding partnering with the historic Team Canada 1972, please contact our <a href="mailto:BoardofDirectors@TeamCanada1972.ca">Board of Directors.</a></p>
+              </section>
             </div>
           </section>
 
